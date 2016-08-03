@@ -1,0 +1,38 @@
+name: rimconv
+version: 0.0.0
+about: image converter in Rust
+author: Chiu-Hsiang Hsu <wdv4758h@gmail.com>
+
+settings:
+    - ArgRequiredElseHelp
+    - ColoredHelp
+
+args:
+    - input:
+        help: input file
+        index: 1
+        takes_value: true
+        required: true
+    - output:
+        help: output file
+        long: output
+        short: o
+        takes_value: true
+        required: true
+    - format:
+        help: output format
+        long: format
+        short: f
+        takes_value: true
+        possible_values:
+            - png
+            - jpeg
+            - gif
+            # - webp
+            - ppm
+            # - tiff
+            # - tga
+            # - bmp
+            - ico
+            # - hdr
+        default_value: png

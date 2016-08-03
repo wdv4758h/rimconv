@@ -2,5 +2,15 @@
 name = "rimconv"
 version = "0.0.0"
 authors = ["Chiu-Hsiang Hsu <wdv4758h@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.rst"
+description = "image converter in Rust"
+repository = "https://github.com/wdv4758h/rimconv/"
+keywords = ["image", "converter"]
 
 [dependencies]
+clap = { version = "2.10.0", features = ["yaml"] }
+image = "0.10.1"
+
+[profile.release]
+lto = true
